@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="第三章：java的基本程序设计结构[TOC] 3.2.注释 注释不会出现在可执行程序中  3.3.数据类型 整形  int：四字节 -2147483648~2147483647   short：两字节 -32768~32767  long：八字节 -9223372036854775808~9223372036854775807 在java中，整型的范围与运行java代码的机器无关。这就解决了软件从">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2021/11/10/java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="第三章：java的基本程序设计结构[TOC] 3.2.注释 注释不会出现在可执行程序中  3.3.数据类型 整形  int：四字节 -2147483648~2147483647   short：两字节 -32768~32767  long：八字节 -9223372036854775808~9223372036854775807 在java中，整型的范围与运行java代码的机器无关。这就解决了软件从">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/1635912665462.png">
+<meta property="article:published_time" content="2021-11-10T13:36:05.039Z">
+<meta property="article:modified_time" content="2021-11-10T13:36:05.471Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/1635912665462.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-java核心技术卷I" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/11/10/java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I/" class="article-date">
+  <time class="dt-published" datetime="2021-11-10T13:36:05.039Z" itemprop="datePublished">2021-11-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="第三章：java的基本程序设计结构"><a href="#第三章：java的基本程序设计结构" class="headerlink" title="第三章：java的基本程序设计结构"></a>第三章：java的基本程序设计结构</h2><p>[TOC]</p>
+<h3 id="3-2-注释"><a href="#3-2-注释" class="headerlink" title="3.2.注释"></a>3.2.注释</h3><blockquote>
+<p>注释不会出现在可执行程序中</p>
+</blockquote>
+<h3 id="3-3-数据类型"><a href="#3-3-数据类型" class="headerlink" title="3.3.数据类型"></a>3.3.数据类型</h3><ul>
+<li><p><strong>整形</strong></p>
+<ul>
+<li><strong>int</strong>：四字节 -2147483648~2147483647  </li>
+<li><strong>short</strong>：两字节 -32768~32767 </li>
+<li><strong>long</strong>：八字节 -9223372036854775808~9223372036854775807</li>
+<li><strong>在java中，整型的范围与运行java代码的机器无关。这就解决了软件从一个平台移植到另一个平台，或者在同一平台不同操作系统之间进行移植给程序员带来的诸多问题</strong>。</li>
+<li>long数值后有一个后缀L或l（建议L）。十六进制数值有一个前缀0x（如0xCAFE）。八进制前缀一个0，例如010对应八进制中的8。很显然，八进制表示法比较容易混淆，所以建议最好不要使用八进制常数</li>
+<li>从java7开始，加上前缀Ob就可以写二进制数，比如0b1001就是9。另外一种写法1_000_000(或者0b1111_0100_0010_0100_0000)标识100万这些下划线只是为了让人更容易读懂，java编译器会去除这些下划线</li>
+</ul>
+</li>
+<li><p><strong>浮点型</strong></p>
+<ul>
+<li><strong>float</strong>：4字节 </li>
+<li><strong>double</strong>：8字节</li>
+<li>double比float精度的两倍。绝大部分应用程序都采用double，在很多情况下，float的精度很难满足要求。事实上很少有情况适合float，例如需要单精度数据的库，或者需要大量存储的数据。float后面加f。</li>
+</ul>
+</li>
+<li><p><strong>char</strong>：表示unicode编码的字符单元的字符类型。部分字符需要两个char值。char类型的值可以表示十六进制，从\u0000到\Ufff。</p>
+</li>
+<li><p>\u005b+\u005D是[]</p>
+</li>
+<li><p><strong>unicode和char类型</strong>：想要弄清楚char类型，就必须了解Unicode编码机制。unicode打破了传统的字符编码限制。在unicode之前，早已出现了许多不同的标准，美国的ascii,俄罗斯的KOI-8,西欧中的iso8859-8，中国的GB18030和BIG-5等。就产生了一下两个问题。一个任意给定的代码值，在两套标准中对应不同的字母。二是采用大字符集的语言其编码长度有可能不同。例如有些常见字符采用单字节编码，另外的采用两个或多个字节</p>
+</li>
+<li><p>码点是指一个编码表中某个字符对应的代码值。在unicode标准中，码点采用16进制书写，并加上前缀U+。例如U+0041就是字母A的码点。unicode的码点可以分成17个代码级别。第一个代码级别称为基本的多语言级别，码点从u+0000~u+ffff；其余的16个级别的码点从u+10000到u+10ffff包括一些辅助字符。</p>
+</li>
+<li><p>UTF-16编码采用不同长度的编码表示所有的unicode码点。在基本的多语言级别中，每个字符用16位表示通常被称为代码单元。</p>
+</li>
+<li><p>在java中char描述了一个UTF-16编码中的一个代码单元</p>
+</li>
+<li><p>我们强烈建议不要在程序中使用char类型，除非的确需要处理UTF-16代码单元。最好将字符串作为抽象数据类型处理</p>
+<p>  <img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1635912665462.png" alt="1635912665462"></p>
+</li>
+<li><p><strong>boolean</strong>：标识真假的布尔值</p>
+</li>
+</ul>
+<h3 id="3-4变量"><a href="#3-4变量" class="headerlink" title="3.4变量"></a>3.4变量</h3><blockquote>
+<p>可以使用character的isJavaIdentifierStart来判断</p>
+</blockquote>
+<h4 id="3-4-1初始化变量"><a href="#3-4-1初始化变量" class="headerlink" title="3.4.1初始化变量"></a>3.4.1初始化变量</h4><h4 id="3-4-2常量"><a href="#3-4-2常量" class="headerlink" title="3.4.2常量"></a>3.4.2常量</h4><h3 id="3-5运算符"><a href="#3-5运算符" class="headerlink" title="3.5运算符"></a>3.5运算符</h3><ul>
+<li>当参与/运算的两个数都为整数时，为整数除法，否则为浮点数除法。</li>
+<li>整数的求余操作有时称为取模</li>
+<li>整数不能除以0，浮点数/0会得到无穷大或者NaN的结果</li>
+</ul>
+<blockquote>
+<p>可移植性是java语言的设计目标之一。无论在哪个虚拟机上运行，同一运算应该得到同样的结果。对于浮点数的算术运算，实现这样的可移植性是相当困难的。Double类型使用64位存储该一个数值，而有些处理器使用80位浮点寄存器。这些寄存器增加了中间过程的精度</p>
+</blockquote>
+<h4 id="3-5-1数学函数与常量"><a href="#3-5-1数学函数与常量" class="headerlink" title="3.5.1数学函数与常量"></a>3.5.1数学函数与常量</h4><ul>
+<li>Math类中，包含了各种各样的方法</li>
+</ul>
+<h4 id="3-5-2数值类型之间的转换"><a href="#3-5-2数值类型之间的转换" class="headerlink" title="3.5.2数值类型之间的转换"></a>3.5.2数值类型之间的转换</h4><h4 id="3-5-3强制类型转换"><a href="#3-5-3强制类型转换" class="headerlink" title="3.5.3强制类型转换"></a>3.5.3强制类型转换</h4><h4 id="3-5-4结合赋值和运算符"><a href="#3-5-4结合赋值和运算符" class="headerlink" title="3.5.4结合赋值和运算符"></a>3.5.4结合赋值和运算符</h4><h4 id="3-5-5自增与自减运算符"><a href="#3-5-5自增与自减运算符" class="headerlink" title="3.5.5自增与自减运算符"></a>3.5.5自增与自减运算符</h4><h4 id="3-5-6关系和boolean运算符"><a href="#3-5-6关系和boolean运算符" class="headerlink" title="3.5.6关系和boolean运算符"></a>3.5.6关系和boolean运算符</h4><h4 id="3-5-7位运算符"><a href="#3-5-7位运算符" class="headerlink" title="3.5.7位运算符"></a>3.5.7位运算符</h4><h4 id="3-5-8括号与运算级别"><a href="#3-5-8括号与运算级别" class="headerlink" title="3.5.8括号与运算级别"></a>3.5.8括号与运算级别</h4><h4 id="3-5-9枚举类型"><a href="#3-5-9枚举类型" class="headerlink" title="3.5.9枚举类型"></a>3.5.9枚举类型</h4><blockquote>
+<p>有时候，变量的取值只在一个有限的集合内。例如披萨只有小中大和超大四种尺寸，可以将这些尺寸编码为1,2,3,4.但这样存在一定的隐患，变量中很有可能保存一个错误的值，比如0。针对这种情况，可以自定义枚举类型。</p>
+<p>枚举类型的作用就是限制变量的范围</p>
+</blockquote>
+<h3 id="3-6字符串"><a href="#3-6字符串" class="headerlink" title="3.6字符串"></a>3.6字符串</h3><blockquote>
+<p>从概念上讲，java字符就是Unicode字符序列。例如“java\u2122”是由五个Unicode字符组成：j，a，v，a，TM。java没有内置的字符串类型，而是在标准java类库提供了一个预定义类，很自然的叫做String。</p>
+</blockquote>
+<h4 id="3-6-1子串"><a href="#3-6-1子串" class="headerlink" title="3.6.1子串"></a>3.6.1子串</h4><h4 id="3-6-2拼接"><a href="#3-6-2拼接" class="headerlink" title="3.6.2拼接"></a>3.6.2拼接</h4><h4 id="3-6-3不可变字符串"><a href="#3-6-3不可变字符串" class="headerlink" title="3.6.3不可变字符串"></a>3.6.3不可变字符串</h4><blockquote>
+<p>java设计者认为共享带来的效率远远高过提取拼接字符串带来的低效率。</p>
+</blockquote>
+<h4 id="3-6-4检测字符串是否相等"><a href="#3-6-4检测字符串是否相等" class="headerlink" title="3.6.4检测字符串是否相等"></a>3.6.4检测字符串是否相等</h4><h4 id="3-6-5空串与null串"><a href="#3-6-5空串与null串" class="headerlink" title="3.6.5空串与null串"></a>3.6.5空串与null串</h4><h4 id="3-6-6码点与代码单元"><a href="#3-6-6码点与代码单元" class="headerlink" title="3.6.6码点与代码单元"></a>3.6.6码点与代码单元</h4><h4 id="3-6-7String-API"><a href="#3-6-7String-API" class="headerlink" title="3.6.7String API"></a>3.6.7String API</h4><ul>
+<li>char charAt(int index)//返回给定位置的代码单元。</li>
+<li>int codePointAt(int index)返回从给定位置的码点</li>
+<li>int offsetByCodePoints(int startIndex,int coCount)返回从startIndex代码开始，位移cpCount后的码点索引</li>
+<li>int compareTo(String other)按照字典顺序，如果字符串位于Other之前，返回false；之后返回true；相等返回0</li>
+<li>IntStream codePoints()将这个字符串的码点作为一个流返回。调用toArray将它们放到一个数组中</li>
+<li>new String(int[] codePoints, int offset, int count) 用数组中从offset开始的count个码点构建一个字符串</li>
+<li>boolean equals(Object other)如果字符串和other相同，返回true</li>
+<li>boolean equalsIgnoreCase(other)忽略大小写</li>
+<li>boolean startsWith(String prifx)</li>
+<li>boolean endsWith(String suffix)</li>
+<li>String replace()替换</li>
+</ul>
+<p>java有一个能够表示任意精度的算术包，通常被称为大数值，是对象类型</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/11/10/java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I/" data-id="ckvtkn4bz0001mcuu2dca9u1p" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/11/10/%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%81%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/11/10/%E4%B8%93%E6%B3%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/11/10/%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%81%93/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/10/java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/10/%E4%B8%93%E6%B3%A8/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/10/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
