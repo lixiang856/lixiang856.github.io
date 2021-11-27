@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang=zh>
 <head>
   <meta charset="utf-8">
   
@@ -18,19 +18,25 @@
   
   
   <title>Apache shardingSphere | Hexo</title>
-  <meta name="description" content="[toc] Sharding Sphere Apache ShardingSphere是一套开源的分布式数据库中间件。它由三个独立且可混合使用的产品组成：Sharding-JDBC、ShardingProxy、Sharding-Sidecar。他们提供了标准化的数据分片、分布式事务、数据库治理功能。  垂直切分垂直分表垂直分库水平切分水平分表水平分库Sharding-JDBCSharding-Pr">
+  <meta name="description" content="[toc] Sharding Sphere Apache ShardingSphere是一套开源的分布式数据库中间件。它由三个独立且可混合使用的产品组成：Sharding-JDBC、ShardingProxy、Sharding-Sidecar。他们提供了标准化的数据分片、分布式事务、数据库治理功能。  垂直切分垂直分表 垂直分库 把单一数据库按照业务进行专库，专表进行划分，减少数据库io压力">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Apache shardingSphere">
-<meta property="og:url" content="http://example.com/2021/11/14/Apache-shardingSphere/index.html">
+<meta property="og:url" content="http://example.com/2021/11/27/Apache-ShardingSphere/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="[toc] Sharding Sphere Apache ShardingSphere是一套开源的分布式数据库中间件。它由三个独立且可混合使用的产品组成：Sharding-JDBC、ShardingProxy、Sharding-Sidecar。他们提供了标准化的数据分片、分布式事务、数据库治理功能。  垂直切分垂直分表垂直分库水平切分水平分表水平分库Sharding-JDBCSharding-Pr">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-11-14T12:12:09.312Z">
-<meta property="article:modified_time" content="2021-11-14T12:12:10.807Z">
+<meta property="og:description" content="[toc] Sharding Sphere Apache ShardingSphere是一套开源的分布式数据库中间件。它由三个独立且可混合使用的产品组成：Sharding-JDBC、ShardingProxy、Sharding-Sidecar。他们提供了标准化的数据分片、分布式事务、数据库治理功能。  垂直切分垂直分表 垂直分库 把单一数据库按照业务进行专库，专表进行划分，减少数据库io压力">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:/Users/大力水手/AppData/Roaming/Typora/typora-user-images/image-20211116203018230.png">
+<meta property="og:image" content="c:/Users/大力水手/AppData/Roaming/Typora/typora-user-images/image-20211116204451102.png">
+<meta property="og:image" content="c:/Users/大力水手/AppData/Roaming/Typora/typora-user-images/image-20211116205534333.png">
+<meta property="og:image" content="c:/Users/大力水手/AppData/Roaming/Typora/typora-user-images/image-20211116210034612.png">
+<meta property="article:published_time" content="2021-11-27T07:25:02.000Z">
+<meta property="article:modified_time" content="2021-11-27T07:29:53.293Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="计算机">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/大力水手/AppData/Roaming/Typora/typora-user-images/image-20211116203018230.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://example.com/2021/11/14/Apache-shardingSphere/index.html">
+  <link rel="canonical" href="http://example.com/2021/11/27/Apache-ShardingSphere/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -54,19 +60,19 @@
       
       
       <div class="profile-block text-center">
-        <a id="avatar" href="https://github.com/cofess" target="_blank">
+        <a id="avatar" href="https://github.com/lixiang856" target="_blank">
           <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
         </a>
-        <h2 id="name" class="hidden-xs hidden-sm">昵称</h2>
-        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Web Developer &amp; Designer</h3>
-        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Shenzhen, China</small>
+        <h2 id="name" class="hidden-xs hidden-sm">大力水手</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">First wisdom/95后最佳程序员</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Shanghai, China</small>
       </div>
       
       <div class="search" id="search-form-wrap">
 
     <form class="search-form sidebar-form">
         <div class="input-group">
-            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
             <span class="input-group-btn">
                 <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
             </span>
@@ -76,7 +82,7 @@
   <div class="ins-search-mask"></div>
   <div class="ins-search-container">
     <div class="ins-input-wrapper">
-      <input type="text" class="ins-search-input" placeholder="Type something..." x-webkit-speech />
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
       <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
     </div>
     <div class="ins-section-wrapper">
@@ -103,7 +109,7 @@
             
             <i class="icon icon-home-fill"></i>
             
-            <span class="menu-title">Home</span>
+            <span class="menu-title">首页</span>
           </a>
         </li>
         
@@ -113,7 +119,7 @@
             
             <i class="icon icon-archives-fill"></i>
             
-            <span class="menu-title">Archives</span>
+            <span class="menu-title">归档</span>
           </a>
         </li>
         
@@ -123,7 +129,7 @@
             
             <i class="icon icon-folder"></i>
             
-            <span class="menu-title">Categories</span>
+            <span class="menu-title">分类</span>
           </a>
         </li>
         
@@ -133,7 +139,7 @@
             
             <i class="icon icon-tags"></i>
             
-            <span class="menu-title">Tags</span>
+            <span class="menu-title">标签</span>
           </a>
         </li>
         
@@ -143,7 +149,7 @@
             
             <i class="icon icon-project"></i>
             
-            <span class="menu-title">Repository</span>
+            <span class="menu-title">项目</span>
           </a>
         </li>
         
@@ -153,7 +159,7 @@
             
             <i class="icon icon-book-fill"></i>
             
-            <span class="menu-title">Books</span>
+            <span class="menu-title">书单</span>
           </a>
         </li>
         
@@ -163,7 +169,7 @@
             
             <i class="icon icon-friendship"></i>
             
-            <span class="menu-title">Links</span>
+            <span class="menu-title">友链</span>
           </a>
         </li>
         
@@ -173,7 +179,7 @@
             
             <i class="icon icon-cup-fill"></i>
             
-            <span class="menu-title">About</span>
+            <span class="menu-title">关于</span>
           </a>
         </li>
         
@@ -182,7 +188,7 @@
 	
     <ul class="social-links">
     	
-        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        <li><a href="https://github.com/lixiang856" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
         
         <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
         
@@ -203,7 +209,7 @@
   <div class="slimContent">
     
       <div class="widget">
-    <h3 class="widget-title">Board</h3>
+    <h3 class="widget-title">公告</h3>
     <div class="widget-body">
         <div id="board">
             <div class="content">
@@ -218,15 +224,10 @@
 
     
       
-
-    
-      
-    
-      
   <div class="widget">
-    <h3 class="widget-title">Archive</h3>
+    <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a><span class="archive-list-count">6</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%81%93/" rel="tag">学习之道</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" rel="tag">学习方法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="tag">计算机</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -234,7 +235,26 @@
     
       
   <div class="widget">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%81%93/" style="font-size: 13px;">学习之道</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" style="font-size: 13px;">学习方法</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" style="font-size: 13px;">计算机</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">十一月 2021</a><span class="archive-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
     <div class="widget-body">
       <ul class="recent-post-list list-unstyled no-thumbnail">
         
@@ -245,10 +265,10 @@
                 
               </p>
               <p class="item-title">
-                <a href="/2021/11/14/Apache-shardingSphere/" class="title">Apache shardingSphere</a>
+                <a href="/2021/11/27/Apache-ShardingSphere/" class="title">Apache shardingSphere</a>
               </p>
               <p class="item-date">
-                <time datetime="2021-11-14T12:12:09.312Z" itemprop="datePublished">2021-11-14</time>
+                <time datetime="2021-11-27T07:25:02.000Z" itemprop="datePublished">2021-11-27</time>
               </p>
             </div>
           </li>
@@ -260,10 +280,10 @@
                 
               </p>
               <p class="item-title">
-                <a href="/2021/11/10/%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%81%93/" class="title">(no title)</a>
+                <a href="/2021/11/27/%E4%B8%93%E6%B3%A8/" class="title">专注</a>
               </p>
               <p class="item-date">
-                <time datetime="2021-11-10T13:36:07.383Z" itemprop="datePublished">2021-11-10</time>
+                <time datetime="2021-11-27T07:25:02.000Z" itemprop="datePublished">2021-11-27</time>
               </p>
             </div>
           </li>
@@ -275,7 +295,22 @@
                 
               </p>
               <p class="item-title">
-                <a href="/2021/11/10/java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I/" class="title">(no title)</a>
+                <a href="/2021/11/27/%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%81%93/" class="title">学习之道</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-11-27T07:25:02.000Z" itemprop="datePublished">2021-11-27</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2021/11/10/java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I/" class="title">java核心技术卷I</a>
               </p>
               <p class="item-date">
                 <time datetime="2021-11-10T13:36:05.039Z" itemprop="datePublished">2021-11-10</time>
@@ -290,25 +325,10 @@
                 
               </p>
               <p class="item-title">
-                <a href="/2021/11/10/%E4%B8%93%E6%B3%A8/" class="title">(no title)</a>
+                <a href="/2021/11/10/hello-world/" class="title">Hello World</a>
               </p>
               <p class="item-date">
-                <time datetime="2021-11-10T13:35:41.486Z" itemprop="datePublished">2021-11-10</time>
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                
-              </p>
-              <p class="item-title">
-                <a href="/2021/11/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="title">我的第一篇博客文章</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2021-11-10T13:12:02.000Z" itemprop="datePublished">2021-11-10</time>
+                <time datetime="2021-11-10T01:11:36.158Z" itemprop="datePublished">2021-11-10</time>
               </p>
             </div>
           </li>
@@ -326,7 +346,7 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-Apache-shardingSphere" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-Apache-ShardingSphere" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
@@ -341,16 +361,21 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2021/11/14/Apache-shardingSphere/" class="article-date">
-	  <time datetime="2021-11-14T12:12:09.312Z" itemprop="datePublished">2021-11-14</time>
+	<a href="/2021/11/27/Apache-ShardingSphere/" class="article-date">
+	  <time datetime="2021-11-27T07:25:02.000Z" itemprop="datePublished">2021-11-27</time>
 	</a>
 </span>
         
         
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="tag">计算机</a>
+  </span>
+
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/11/14/Apache-shardingSphere/#comments" class="article-comment-link">Comments</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/11/27/Apache-ShardingSphere/#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
@@ -360,7 +385,33 @@
 <h2 id="Sharding-Sphere"><a href="#Sharding-Sphere" class="headerlink" title="Sharding Sphere"></a>Sharding Sphere</h2><blockquote>
 <p>Apache ShardingSphere是一套开源的分布式数据库中间件。它由三个独立且可混合使用的产品组成：Sharding-JDBC、ShardingProxy、Sharding-Sidecar。他们提供了标准化的数据分片、分布式事务、数据库治理功能。</p>
 </blockquote>
-<h3 id="垂直切分"><a href="#垂直切分" class="headerlink" title="垂直切分"></a>垂直切分</h3><h4 id="垂直分表"><a href="#垂直分表" class="headerlink" title="垂直分表"></a>垂直分表</h4><h4 id="垂直分库"><a href="#垂直分库" class="headerlink" title="垂直分库"></a>垂直分库</h4><h3 id="水平切分"><a href="#水平切分" class="headerlink" title="水平切分"></a>水平切分</h3><h4 id="水平分表"><a href="#水平分表" class="headerlink" title="水平分表"></a>水平分表</h4><h4 id="水平分库"><a href="#水平分库" class="headerlink" title="水平分库"></a>水平分库</h4><h2 id="Sharding-JDBC"><a href="#Sharding-JDBC" class="headerlink" title="Sharding-JDBC"></a>Sharding-JDBC</h2><h2 id="Sharding-Proxy"><a href="#Sharding-Proxy" class="headerlink" title="Sharding-Proxy"></a>Sharding-Proxy</h2>
+<h3 id="垂直切分"><a href="#垂直切分" class="headerlink" title="垂直切分"></a>垂直切分</h3><h4 id="垂直分表"><a href="#垂直分表" class="headerlink" title="垂直分表"></a>垂直分表</h4><p><img src="C:\Users\大力水手\AppData\Roaming\Typora\typora-user-images\image-20211116203018230.png" alt="image-20211116203018230"></p>
+<h4 id="垂直分库"><a href="#垂直分库" class="headerlink" title="垂直分库"></a>垂直分库</h4><blockquote>
+<p>把单一数据库按照业务进行专库，专表进行划分，减少数据库io压力</p>
+</blockquote>
+<p><img src="C:\Users\大力水手\AppData\Roaming\Typora\typora-user-images\image-20211116204451102.png" alt="image-20211116204451102"></p>
+<h3 id="水平切分"><a href="#水平切分" class="headerlink" title="水平切分"></a>水平切分</h3><h4 id="水平分库"><a href="#水平分库" class="headerlink" title="水平分库"></a>水平分库</h4><blockquote>
+<p>分布在不同的服务器上，不便于维护</p>
+</blockquote>
+<p><img src="C:\Users\大力水手\AppData\Roaming\Typora\typora-user-images\image-20211116205534333.png" alt="image-20211116205534333"></p>
+<h4 id="水平分表"><a href="#水平分表" class="headerlink" title="水平分表"></a>水平分表</h4><h4 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\大力水手\AppData\Roaming\Typora\typora-user-images\image-20211116210034612.png" alt="image-20211116210034612"></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//数据源命名</span></span><br><span class="line">spring.shardingsphere.datasource.names=m1</span><br><span class="line"><span class="comment">//配置数据源</span></span><br><span class="line">spring.shardingsphere.datasource.m1.type=com.alibaba.druid.pool.DruidDataSource</span><br><span class="line">spring.shardingsphere.datasource.m1.driver-<span class="class"><span class="keyword">class</span>-<span class="title">name</span></span>=com.mysql.cj.jdbc.Driver</span><br><span class="line">spring.shardingsphere.datasource.m1.url=jdbc:mysql:<span class="comment">//localhost:3306/edu_db_1?serverTimezone=GMT%2B8</span></span><br><span class="line">spring.shardingsphere.datasource.m1.username=root</span><br><span class="line">spring.shardingsphere.datasource.m1.password=<span class="number">123456</span></span><br><span class="line">    </span><br><span class="line">spring.shardingsphere.sharding.tables.course.actual-data-nodes=m1.course_$-&gt;&#123;<span class="number">1.</span><span class="number">.2</span>&#125;</span><br><span class="line"></span><br><span class="line">spring.shardingsphere.sharding.tables.course.key-generator.column=cid</span><br><span class="line">spring.shardingsphere.sharding.tables.course.key-generator.type=SNOWFLAKE</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h4><ol>
+<li><strong>在数据库设计时考虑垂直分库和分表</strong></li>
+<li><strong>随着数据量增加，不要急于做水平分表，首先应考虑缓存处理，读写分离，使用索引等方式。如果都不能根本的解决问题，在考虑水平分库分表</strong></li>
+</ol>
+<h4 id="分库分表的问题："><a href="#分库分表的问题：" class="headerlink" title="分库分表的问题："></a>分库分表的问题：</h4><ol>
+<li><strong>跨节点连接查询问题（分页，排序）</strong></li>
+<li><strong>多数据源管理问题</strong></li>
+</ol>
+<h2 id="Sharding-JDBC"><a href="#Sharding-JDBC" class="headerlink" title="Sharding-JDBC"></a>Sharding-JDBC</h2><blockquote>
+<p>定义为java轻量级框架，在JDBC层提供而外的服务，它使用客户端直连数据库，以jar包的形式提供服务，无需额外部署，可以理解为增强版的JDBC，完全兼容JDBC和各种ORM框架。</p>
+<p>简化分库分表后的操作，<strong>数据分片</strong>，<strong>读写分离</strong></p>
+</blockquote>
+<p>​    </p>
+<h2 id="Sharding-Proxy"><a href="#Sharding-Proxy" class="headerlink" title="Sharding-Proxy"></a>Sharding-Proxy</h2>
       
     </div>
     <div class="article-footer">
@@ -369,7 +420,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://example.com/2021/11/14/Apache-shardingSphere/" title="Apache shardingSphere" target="_blank" rel="external">http://example.com/2021/11/14/Apache-shardingSphere/</a>
+      <a href="http://example.com/2021/11/27/Apache-ShardingSphere/" title="Apache shardingSphere" target="_blank" rel="external">http://example.com/2021/11/27/Apache-ShardingSphere/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -383,12 +434,12 @@
   <div class="panel-body">
     <figure class="media">
       <div class="media-left">
-        <a href="https://github.com/cofess" target="_blank" class="img-burn thumb-sm visible-lg">
+        <a href="https://github.com/lixiang856" target="_blank" class="img-burn thumb-sm visible-lg">
           <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
         </a>
       </div>
       <div class="media-body">
-        <h3 class="media-heading"><a href="https://github.com/cofess" target="_blank"><span class="text-dark">昵称</span><small class="ml-1x">Web Developer &amp; Designer</small></a></h3>
+        <h3 class="media-heading"><a href="https://github.com/lixiang856" target="_blank"><span class="text-dark">大力水手</span><small class="ml-1x">First wisdom/95后最佳程序员</small></a></h3>
         <div>个人简介。</div>
       </div>
     </figure>
@@ -417,7 +468,7 @@
     
     
     <li class="next">
-      <a href="/2021/11/10/%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%81%93/" title="(no title)"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2021/11/27/%E4%B8%93%E6%B3%A8/" title="专注"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
@@ -425,7 +476,7 @@
   
   
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>$</span></button>
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
   <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
     <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
   </div> -->
@@ -447,31 +498,31 @@
       <div class="modal-body">
         <div class="donate-box">
           <div class="donate-head">
-            <p>Maybe you could buy me a cup of coffee.</p>
+            <p>感谢您的支持，我会继续努力的!</p>
           </div>
           <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade active in" id="alipay">
               <div class="donate-payimg">
-                <img src="/images/donate/alipayimg.png" alt="Scan Qrcode" title="Scan" />
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
               </div>
-              <p class="text-muted mv">Scan this qrcode</p>
-              <p class="text-grey">Open alipay app scan this qrcode, buy me a coffee!</p>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
             </div>
             <div role="tabpanel" class="tab-pane fade" id="wechatpay">
               <div class="donate-payimg">
-                <img src="/images/donate/wechatpayimg.png" alt="Scan Qrcode" title="Scan" />
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
               </div>
-              <p class="text-muted mv">Scan this qrcode</p>
-              <p class="text-grey">Open wechat app scan this qrcode, buy me a coffee!</p>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
             </div>
           </div>
           <div class="donate-footer">
             <ul class="nav nav-tabs nav-justified" role="tablist">
               <li role="presentation" class="active">
-                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> alipay</a>
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
               </li>
               <li role="presentation" class="">
-                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> wechat payment</a>
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
               </li>
             </ul>
           </div>
@@ -490,7 +541,7 @@
 	
     <ul class="social-links">
     	
-        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        <li><a href="https://github.com/lixiang856" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
         
         <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
         
@@ -524,11 +575,11 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
-            PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
-            UNTITLED: '(Untitled)',
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
